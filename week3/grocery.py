@@ -8,7 +8,8 @@ def main():
             print("\n")
             break
         else:
-            grocery_list.append(user_input)
-            print(grocery_list)
+            if user_input not in grocery_list:
+                grocery_list.append(user_input)
+                print(grocery_list)
 
 main()
