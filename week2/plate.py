@@ -20,7 +20,7 @@ def is_valid(s):
         
         if index < 2 and (not character.isalpha()):
             return False
-        elif character.isspace(): 
+        elif character.isspace() or character == "," or character == ".":
             return False
         
         if character.isdigit():
