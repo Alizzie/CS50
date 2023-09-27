@@ -12,19 +12,23 @@ dict = {
 
 def main():
     total_price = 0
-    price = getNextItemPrice()
-    total_price += price
-    print(f"Total: ${total_price}")
-
-def getNextItemPrice():
     while True:
-        try: 
-            item = input("Item: ")
-            
-            if item in dict:
-                print(item, dict[item])
-                return dict[item]
+        try:
+            price = getNextItemPrice()
+            total_price = total_price +  price
         except EOFError: #control-d or control-z on windows
             print("\n")
+            break
+        except TypeError:
+            pass
+        print(f"Total: ${total_price}")
+
+
+def getNextItemPrice():
+    item = input("Item: ")
+    
+    if item in dict:
+        print(item, dict[item])
+        return dict[item]
 
 main()
