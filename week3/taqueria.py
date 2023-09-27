@@ -20,5 +20,11 @@ def getNextItemPrice():
     while True:
         try: 
             item = input("Item: ")
+            
+            if item in dict:
+                print(item, dict[item])
+                return dict[item]
         except EOFError: #control-d or control-z on windows
             print("\n")
+
+main()
