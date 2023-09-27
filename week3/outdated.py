@@ -1,4 +1,4 @@
-list = [
+months = [
     "January",
     "February",
     "March",
@@ -18,8 +18,27 @@ def main():
         try:
             user_date = input("Date: ")
             month, day, year = map(int, user_date.split('/'))
-            print(f"{day}")
+
+            if day > 31: 
+                    raise Exception()
+            	
+            print(f"{year}-{month:02}-{day:02}")
         except:
-            pass
+            try:
+                month, day, year = user_date.split(" ")
+                day = int(day[:-1]) 
+
+                if day > 31: 
+                    raise Exception()
+
+                year = int(year)
+                month = int(months.index(month)) + 1
+                print(f"{year}-{month:02}-{day:02}") 
+            except:
+                pass
+            else:
+                break
+        else: 
+            break
 
 main()
