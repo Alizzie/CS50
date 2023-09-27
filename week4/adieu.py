@@ -7,6 +7,17 @@ def main():
         except EOFError:
             print("\n")
             break
-    print(names)
+    printNames(names)
+
+def printNames(names):
+    print("Adieu, adieu, to ", end="")
+    
+    for name in names[:-2]:
+        print(f"{name}, ", end="")
+    
+    if len(names) > 1:
+        print(names[-2], "and", names[-1])
+    else:
+        print(names[-1])
 
 main()
