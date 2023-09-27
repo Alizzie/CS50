@@ -19,7 +19,7 @@ def main():
             user_date = input("Date: ")
             month, day, year = map(int, user_date.split('/'))
 
-            if day > 31: 
+            if day > 31 or month > 12 or month < 1:
                     raise Exception()
             	
             print(f"{year}-{month:02}-{day:02}")
