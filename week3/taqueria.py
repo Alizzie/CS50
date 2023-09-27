@@ -10,3 +10,8 @@ dict = {
     "Tortilla Salad": 8.00
 }
 
+while True:
+    try: 
+        item = input()
+    except EOFError: #control-d or control-z on windows
+        print("ended\n")
