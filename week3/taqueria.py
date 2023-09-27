@@ -10,8 +10,15 @@ dict = {
     "Tortilla Salad": 8.00
 }
 
-while True:
-    try: 
-        item = input()
-    except EOFError: #control-d or control-z on windows
-        print("ended\n")
+def main():
+    total_price = 0
+    price = getNextItemPrice()
+    total_price += price
+    print(f"Total: ${total_price}")
+
+def getNextItemPrice():
+    while True:
+        try: 
+            item = input("Item: ")
+        except EOFError: #control-d or control-z on windows
+            print("\n")
