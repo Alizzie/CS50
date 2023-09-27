@@ -1,4 +1,8 @@
 user_input = input("Input: ")
-user_input = user_input.replace("A", "").replace("E", "").replace("I", "").replace("O","").replace("U",'')
 
+
+vowels = ['A','E', 'I','O', 'U']
+for vowel in vowels:
+    user_input = user_input.replace(vowel, '')
+    user_input = user_input.replace(str.lower(vowel), '')
 print(f"Output: {user_input}")
