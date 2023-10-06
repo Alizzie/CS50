@@ -17,4 +17,4 @@ try:
 
 
 except requests.RequestException:
-    ...
+    sys.exit("Request Exception")
