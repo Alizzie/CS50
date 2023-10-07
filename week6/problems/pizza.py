@@ -27,7 +27,7 @@ def get_filename(argv):
     filename = sys.argv[1]
 
     if filename[-4:] != ".csv":
-        sys.exit("Not a Python file")
+        sys.exit("Not a csv file")
 
     return filename
 
