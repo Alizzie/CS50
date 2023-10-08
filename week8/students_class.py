@@ -5,6 +5,13 @@ class Student:
 
     def __str__(self):
         return f"{self.name} from {self.house}"
+    
+    @classmethod
+    def get(cls):
+        name = input("Name: ")
+        house = input("House: ")
+        return cls(name, house)
+
 
     # Getter for name
     @property
