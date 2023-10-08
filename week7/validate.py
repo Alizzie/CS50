@@ -57,3 +57,23 @@ if re.search(r"^\w+@\w.+\.(com|edu|gov|net|org)$", email):
     print("Valid")
 else:
     print("Invalid")
+
+# FLAGS within re.search function
+#re.IGNORECASE
+#re.MULTILINE
+#re.DOTALL
+
+if re.search(r"^\w+@\w.+\.edu$", email, re.IGNORECASE):
+    print("Valid")
+else:
+    print("Invalid")
+
+# For only two dots after @
+if re.search(r"^\w+@(\w+\.)?\w+\.edu$", email, re.IGNORECASE):
+    print("Valid")
+else:
+    print("Invalid")
+
+
+# Other functions re.match and re.fullmatch
+
